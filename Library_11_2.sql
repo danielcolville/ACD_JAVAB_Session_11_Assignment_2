@@ -12,7 +12,7 @@ WHERE  str_to_date(book_issue_date,'%m/%d/%Y') between '2008/08/21' AND '2008/08
 -- '8/21/08' AND '8/29/08';
 
 -- b
-SELECT * FROM book_table WHERE book_author='Caressa Cogan';
+SELECT book_author,count(DISTINCT book_name) AS 'Number of books written' FROM book_table WHERE book_author='Caressa Cogan';
 -- c
 SELECT book_publisher,count(DISTINCT book_name) FROM book_table GROUP BY book_publisher;
 -- d
